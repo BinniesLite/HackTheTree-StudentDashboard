@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import {BrowserRouter  as Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../SubComponents/Logo";
 import Profile from "../SubComponents/Profile";
+import {Schedule} from './index';
 // import Button from './Button'
 
 const Section = styled.section`
@@ -53,9 +54,11 @@ const Navbar = () => {
         <Nav>
         <Logo />
         <Menu>
-          <MenuItem>Home</MenuItem>
+          <MenuItem><NavLink to="/">Home</NavLink></MenuItem>
           <MenuItem>About</MenuItem>
-          <MenuItem>Schedule</MenuItem>
+          <MenuItem>
+            <NavLink to="/schedule">Schedule</NavLink>
+          </MenuItem>
           <MenuItem>
           Courses
           </MenuItem>
